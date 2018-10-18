@@ -1,0 +1,5 @@
+#!/bin/bash
+  
+echo "Enter a Username : "
+read n
+grep "$n" /etc/passwd | awk -F ":" '{print $3,$4}'                                                                                                                                                 

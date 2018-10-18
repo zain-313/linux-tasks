@@ -1,0 +1,6 @@
+#!/bin/bash
+  
+ps -u
+echo "Enter Process ID to Kill : "
+read p
+kill -9 $p
