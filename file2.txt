@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo -n "Please enter a number: "
+read x
+
+r=$[ $x % 2 ]
+if [ $r -eq 0 ]
+then
+echo "$x is an even number"
+echo "$x is an even number" > file3.txt
+
+else
+
+echo "$x is an odd number"
+echo "$x is an odd number" > file3.txt
+fi
+
+echo "Do you want to delete the file? "
+read p
+if [[ $p == y* ]]
+then
+rm file3.txt
+else
+touch userfile3.txt
+fi
+
+mv userfile3.txt /home/changedFileName

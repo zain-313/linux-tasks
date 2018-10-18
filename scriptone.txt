@@ -1,0 +1,11 @@
+#!bin/bash
+
+mkdir 'QACZain'
+cd QACZain
+touch file1.txt file2.txt file3.txt
+vim file1.txt
+mkdir childDir
+cp file1.txt childDir
+
+
+

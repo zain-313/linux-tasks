@@ -1,0 +1,6 @@
+#!/bin/bash
+  
+echo "Enter any amount of numbers and press Enter to stop"
+read n
+sorted=$(echo $n | tr " " "\n" | sort -V)
+echo $sorted

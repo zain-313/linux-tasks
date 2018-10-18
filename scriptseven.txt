@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter a directory"
+read n
+
+if [ -d "$n" ]; then
+echo "Number of files in the directory is $(find "$n" -type f | wc -l)"
+echo "The directory was last modified at: $(date -r $n)"
+echo "The largest file in the directory is: $(find "$n" -type f -ls | sort -k 7 -r -n |head -1 | awk '{print $11}')"
+echo "The smallest file in the directory is: $(find "$n" -type f -ls | sort -k 7 -r -n |tail -n -1 | awk '{print $11}')"
+else
+echo "[ERROR] Provide a correct directory."
+exit 1
+fi
